@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript operaciones CRUD con Html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+</head>
+
+<body>
+    <h1>Formulario de inscripción bolsa de empleo</h1>
+    <table>
+        <tr>
+            <td>
+                <!--html form for curd operation-->
+                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Nombre completo</label>
+                        <label class="validation-error hide" id="fullNameValidationError">This field is required</label>
+                        <input type="text" name="fullName" id="fullName">
+
+                    </div>
+                    <div>
+                        <label>Número telefónico</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Salario aspirado</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>Ciudad</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <!--Table to list all the records-->
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Nombre completo</th>
+                            <th>Número telefónico</th>
+                            <th>Salario</th>
+                            <th>Ciudad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
